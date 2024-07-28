@@ -81,6 +81,9 @@ PRODUCT_PACKAGES += \
     fsck.exfat \
     mkfs.exfat
 
+# extra private configuration - optional.
+$(call inherit-product-if-exists, vendor/extra/product.mk)
+
 # Fonts
 PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,vendor/aospa/fonts/,$(TARGET_COPY_OUT_PRODUCT)/fonts) \
